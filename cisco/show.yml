@@ -1,0 +1,13 @@
+---
+- name: First play
+  hosts: cisco
+  gather_facts: False
+  connection: local
+  tasks:
+   - name: First Task
+     ios_command:
+         commands: show ip inter br
+     register: version
+   - name: Second Task
+     debug:
+         var: version
