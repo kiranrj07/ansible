@@ -1,0 +1,9 @@
+-
+ name: this is my first playbook
+ hosts: webserver1
+ vars:
+  servcename: httpd
+  tasks:
+   - 
+    name: "creating file using variable"
+    service: name={{ servicename }} state=started

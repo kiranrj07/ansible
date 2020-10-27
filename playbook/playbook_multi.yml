@@ -1,0 +1,21 @@
+-
+ name: "This is our first play."
+ hosts: webserver1
+ tasks:
+ -
+  name: "Creating dummy file on webserver1"
+  command: touch file_on_webserver1
+ -
+  name: "copy hosts files in tmp folder"
+  command: cp /etc/hosts /tmp/myhosts
+
+-
+ name: "This is out second play"
+ hosts: web_database_servers
+ tasks:
+ -  
+  name: "Creting directory in tmp directory"
+  command: mkdir /tmp/mysecondPlaydir
+ - 
+  name: "Create a dummy fukles in databnase and webserver."
+  command: touch /tmp/mysecondPlaydir/secondPlay.txt

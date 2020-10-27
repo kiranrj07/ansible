@@ -1,0 +1,11 @@
+-
+ name: "This is 2 array play"
+ hosts: webserver1
+ tasks:
+ -
+  name: "Creating a dummy directory in webserver1"
+  command: mkdir /tmp/ansible_dummy
+
+ -
+  name: "Creating a file inside dummy folder created"
+  command: touch /tmp/ansible_dummy/duymmy_file1.txt

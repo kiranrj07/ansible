@@ -1,0 +1,8 @@
+-
+ name: This is our first play
+ hosts: web_database_servers
+ tasks:
+  -
+   name: "Create adummy file on webserver1"
+   command: echo "8.8.8.8" | tee -a /tmp/resolve.conf
+

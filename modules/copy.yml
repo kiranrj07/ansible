@@ -1,0 +1,8 @@
+-
+ name: "This is out first copy module"
+ hosts: webserver1
+ tasks: 
+
+ -
+  name: "Create a dummy file on all servers"
+  copy: src=test.txt dest=/tmp/ owner=pod1master group=pod1master mode=0644  

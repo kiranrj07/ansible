@@ -1,0 +1,18 @@
+- name: Switch config
+  connection: network_cli
+  hosts: switch
+  gather_facts: no
+  become: yes
+  become_method: enable
+
+  tasks:
+
+    - name: IOS >> VLAN Updates
+      ios_vlan:
+        aggregate:
+          - 2
+          - 5
+        vlan_id: 5
+        name: TEST VLAN 5
+        state: present
+      register: command_output

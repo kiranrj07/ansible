@@ -1,0 +1,9 @@
+-
+ name: this is out first play
+ hosts: web_database_servers
+ tasks:
+ - 
+  name: "Create a dummy file on webserver1"
+  service:
+    name: httpd
+    state: started

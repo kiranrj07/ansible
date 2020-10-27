@@ -1,0 +1,9 @@
+-
+ name: This is out first play
+ hosts: web_database_servers
+
+ tasks:
+ -
+  name: "Cerate a dummy file on webserver1"
+  become: yes
+  user: name="kiran" state=present password="roger@123"

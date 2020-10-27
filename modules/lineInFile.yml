@@ -1,0 +1,7 @@
+-
+ name: This is our first play.
+ hosts: web_database_servers
+ tasks: 
+ -
+  name: "Create a dummy file on webserver1"
+  lineinfile: path=/tmp/test.txt line="Kiran Raj"

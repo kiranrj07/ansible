@@ -1,0 +1,9 @@
+-
+ name: This is our first play
+ hosts: web_database_servers
+ tasks:
+ -
+  name: "Create a dummy file on webserver1"
+  script: testScript.sh pod1master creates=/tmp/test.txt
+
+

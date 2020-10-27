@@ -1,0 +1,8 @@
+
+-
+ name: This is our first paly.
+ hosts: webserver1
+ tasks:
+   -
+	name: 'Create a dummy file on wednesday'
+	command: touch /tmp/ansible_dummy.txt
