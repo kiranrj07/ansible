@@ -1,0 +1,17 @@
+- name: General config
+  
+  hosts: cisco
+
+  tasks:
+   - name: Add banner
+     ios_banner:
+       banner: login
+       text: |
+         Do not touch this router/switch 
+         probhibited access
+       state: present
+  
+   - name: Add loopback
+     ios_interface:
+         name: loopback1
+         state: present

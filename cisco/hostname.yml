@@ -1,14 +1,16 @@
 ---
 - name: First play
   become_method: enable
+  become: yes
   hosts: cisco
   gather_facts: False
-  connection: local
+  connection: network_cli
   tasks:
    - name: First Task
      ios_config:
          lines: hostname Ansible
      register: var1
+
    - name: Second Task
      debug:
          var: var1

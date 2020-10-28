@@ -1,0 +1,23 @@
+---
+# yamllint disable rule:truthy
+# yamllint disable rule:line-length
+- name: Switch config
+  connection: network_cli
+  hosts: switch.com
+  gather_facts: no
+  become: yes
+  become_method: enable
+
+  tasks:
+
+    - name: IOS >> VLAN Updates
+      ios_vlan:
+        vlan_id: 5
+        name: test-vlan5
+        interfaces:
+          - GigabitEthernet1/1
+      register: command_output
+
+    - name: DEBUG >> VLAN Update
+      debug:
+        msg: "{{ command_output }}"
