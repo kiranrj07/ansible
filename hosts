@@ -50,6 +50,10 @@ ansible_connection=network_cli
 ansible_network_os=ios
 ansible_port=22
 
+[windows]
+192.168.1.141
+
+
 
 # It should live in /etc/ansible/hosts
 #
